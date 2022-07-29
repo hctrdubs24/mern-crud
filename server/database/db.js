@@ -1,11 +1,12 @@
 import { createPool } from "mysql2/promise";
+import { DATABASE, HOST, PASSWORD, USER } from "../config.js";
 
 export const pool = createPool({
-  host: "gedz16id0y9f.us-east-1.psdb.cloud",
-  user: "ea5746gyf7tj",
+  host: HOST,
+  user: USER,
   port: 3306,
-  password: "pscale_pw_aYOpzyTcm0lt--9Wbfcw4YJfj-xnkGw4rBFFYC-zOo4",
-  database: "mern-crud",
+  password: PASSWORD,
+  database: DATABASE,
   ssl: {
     rejectUnauthorized: false,
   },

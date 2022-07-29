@@ -6,6 +6,7 @@ export const getTasks = async (req, res) => {
     const [result] = await pool.query(
       // "SELECT * FROM tasks ORDER BY createdAt ASC;"
       "SELECT * FROM tasks;"
+
     );
     res.json(result);
   } catch (error) {
