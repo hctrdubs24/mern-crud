@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { PORT_APP } from "./config.js";
+import { PORT } from "./config.js";
 import indexRoutes from "./routes/index.routes.js";
 import taskRoutes from "./routes/task.routes.js";
 import { dirname, join } from "path";
@@ -23,4 +23,4 @@ app.use(indexRoutes);
 app.use(taskRoutes);
 app.use(express.static(join(__dirname, "../client/dist")));
 
-app.listen(PORT_APP, console.log(`Server is listenning on port ${PORT_APP}`));
+app.listen(PORT, console.log(`Server is listenning on port ${PORT}`));
